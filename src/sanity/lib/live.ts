@@ -1,9 +1,10 @@
 import { defineLive } from 'next-sanity/live'
-import { token } from "@/sanity/lib/token"
-import { client } from "@/sanity/lib/client";
+import { token } from "./token"
+import { client } from "./client";
 
 export const { sanityFetch, SanityLive } = defineLive({
   client,
   browserToken: token,
   serverToken: token,
+  // @ts-ignore - token is optional
 });
